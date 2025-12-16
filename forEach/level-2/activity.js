@@ -6,136 +6,84 @@
 // EXERCISES
 // ============================================
 
-/*
-EXERCISE 1
-----------
-Given the array of objects:
-[
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
-  { name: "Charlie", age: 35 }
-]
+// ============================================
+// EXERCISE SOLUTIONS
+// ============================================
 
-Use forEach() to print each person's name and age in the format: 
-"Name is Age years old".
+// EXERCISE 1 – Print Name and Age
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// One-line arrow function
+exercise1Array.forEach(person =>
+  console.log(`${person.name} is ${person.age} years old`)
+);
 
-const exercise1Array = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
-  { name: "Charlie", age: 35 }
-];
+// Regular arrow function
+exercise1Array.forEach((person) => {
+  console.log(`${person.name} is ${person.age} years old`);
+});
 
-// Your solution here (one-line arrow function):
-// exercise1Array.forEach(
+// --------------------------------------------
 
-// Your solution here (regular arrow function):
-// exercise1Array.forEach((
+// EXERCISE 2 – Print Only Even Numbers
 
-// Expected output:
-// "Alice is 25 years old"
-// "Bob is 30 years old"
-// "Charlie is 35 years old"
+// One-line arrow function
+exercise2Array.forEach(n => {
+  if (n % 2 === 0) console.log(n);
+});
 
-/*
-EXERCISE 2
-----------
-Given the array [1, 2, 3, 4, 5], use forEach() to print only the 
-even numbers (2, 4).
+// Regular arrow function
+exercise2Array.forEach((n) => {
+  if (n % 2 === 0) {
+    console.log(n);
+  }
+});
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// --------------------------------------------
 
-const exercise2Array = [1, 2, 3, 4, 5];
+// EXERCISE 3 – Print Fruit with Index
 
-// Your solution here (one-line arrow function):
-// exercise2Array.forEach(
+// One-line arrow function
+exercise3Array.forEach((fruit, index) =>
+  console.log(`Index ${index}: ${fruit}`)
+);
 
-// Your solution here (regular arrow function):
-// exercise2Array.forEach((
+// Regular arrow function
+exercise3Array.forEach((fruit, index) => {
+  console.log(`Index ${index}: ${fruit}`);
+});
 
-// Expected output: 2, 4 (each on a new line)
+// --------------------------------------------
 
-/*
-EXERCISE 3
-----------
-Given the array ["apple", "banana", "cherry", "date"], use forEach() 
-to print each fruit name with its index in the format: 
-"Index 0: apple", "Index 1: banana", etc.
+// EXERCISE 4 – Build String with Arrows
 
-Hint: forEach can take a second parameter for the index.
+// One-line arrow function
+exercise4Array.forEach((n, index) =>
+  exercise4Result += index === 0 ? n : ` -> ${n}`
+);
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// Regular arrow function (reset first)
+exercise4Result = "";
+exercise4Array.forEach((n, index) => {
+  exercise4Result += index === 0 ? n : ` -> ${n}`;
+});
 
-const exercise3Array = ["apple", "banana", "cherry", "date"];
+console.log("Exercise 4 - Result:", exercise4Result);
 
-// Your solution here (one-line arrow function):
-// exercise3Array.forEach((
+// --------------------------------------------
 
-// Your solution here (regular arrow function):
-// exercise3Array.forEach((
+// EXERCISE 5 – Count Numbers Greater Than 20
 
-// Expected output:
-// "Index 0: apple"
-// "Index 1: banana"
-// "Index 2: cherry"
-// "Index 3: date"
+// One-line arrow function
+exercise5Array.forEach(n => {
+  if (n > 20) exercise5Count++;
+});
 
-/*
-EXERCISE 4
-----------
-Given the array [10, 20, 30, 40], use forEach() to build a string that 
-contains all numbers separated by " -> ". Store the result in a variable 
-and print it.
+// Regular arrow function (reset first attaching)
+exercise5Count = 0;
+exercise5Array.forEach((n) => {
+  if (n > 20) {
+    exercise5Count++;
+  }
+});
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
-
-const exercise4Array = [10, 20, 30, 40];
-let exercise4Result = "";
-
-// Your solution here (one-line arrow function):
-// exercise4Array.forEach((
-
-// Your solution here (regular arrow function):
-// exercise4Array.forEach((
-
-// Uncomment to test:
-// console.log("Exercise 4 - Result:", exercise4Result);
-// Expected: "10 -> 20 -> 30 -> 40"
-
-/*
-EXERCISE 5
-----------
-Given the array [5, 15, 25, 35], use forEach() to count how many numbers 
-are greater than 20. Store the count in a variable and print it.
-
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
-
-const exercise5Array = [5, 15, 25, 35];
-let exercise5Count = 0;
-
-// Your solution here (one-line arrow function):
-// exercise5Array.forEach(
-
-// Your solution here (regular arrow function):
-// exercise5Array.forEach((
-
-// Uncomment to test:
-// console.log("Exercise 5 - Count:", exercise5Count);
-// Expected: 2
-
+console.log("Exercise 5 - Count:", exercise5Count);
