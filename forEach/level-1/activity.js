@@ -105,111 +105,67 @@ console.log("Example 3 - Regular sum:", sum); // 60
 // EXERCISES
 // ============================================
 
-/*
-EXERCISE 1
-----------
-Given the array [1, 2, 3, 4, 5], use forEach() to print each number 
-multiplied by 2.
+// ============================================
+// EXERCISE SOLUTIONS
+// ============================================
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// EXERCISE 1 – Print Each Number Multiplied by 2
 
-const exercise1Array = [1, 2, 3, 4, 5];
+// One-line arrow function
+exercise1Array.forEach(n => console.log(n * 2));
 
-// Your solution here (one-line arrow function):
-// exercise1Array.forEach(
+// Regular arrow function
+exercise1Array.forEach((n) => {
+  console.log(n * 2);
+});
 
-// Your solution here (regular arrow function):
-// exercise1Array.forEach((
+// --------------------------------------------
 
-// Expected output: 2, 4, 6, 8, 10 (each on a new line)
+// EXERCISE 2 – Print Each Fruit in Uppercase
 
-/*
-EXERCISE 2
-----------
-Given the array ["apple", "banana", "orange"], use forEach() to print 
-each fruit name in uppercase.
+// One-line arrow function
+exercise2Array.forEach(fruit => console.log(fruit.toUpperCase()));
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// Regular arrow function
+exercise2Array.forEach((fruit) => {
+  console.log(fruit.toUpperCase());
+});
 
-const exercise2Array = ["apple", "banana", "orange"];
+// --------------------------------------------
 
-// Your solution here (one-line arrow function):
-// exercise2Array.forEach(
+// EXERCISE 3 – Calculate and Print the Sum
 
-// Your solution here (regular arrow function):
-// exercise2Array.forEach((
+// One-line arrow function
+exercise3Array.forEach(n => exercise3Sum += n);
 
-// Expected output: "APPLE", "BANANA", "ORANGE" (each on a new line)
+// Regular arrow function (reset sum first)
+exercise3Sum = 0;
+exercise3Array.forEach((n) => {
+  exercise3Sum += n;
+});
 
-/*
-EXERCISE 3
-----------
-Given the array [5, 10, 15, 20], use forEach() to calculate and print 
-the sum of all numbers. Use a variable to store the sum.
+console.log("Exercise 3 - Sum:", exercise3Sum);
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// --------------------------------------------
 
-const exercise3Array = [5, 10, 15, 20];
-let exercise3Sum = 0;
+// EXERCISE 4 – Print Colors with Text
 
-// Your solution here (one-line arrow function):
-// exercise3Array.forEach(
+// One-line arrow function
+exercise4Array.forEach(color => console.log(`Color: ${color}`));
 
-// Your solution here (regular arrow function):
-// exercise3Array.forEach((
+// Regular arrow function
+exercise4Array.forEach((color) => {
+  console.log(`Color: ${color}`);
+});
 
-// Uncomment to test:
-// console.log("Exercise 3 - Sum:", exercise3Sum);
-// Expected: 50
+// --------------------------------------------
 
-/*
-EXERCISE 4
-----------
-Given the array ["red", "green", "blue"], use forEach() to print each 
-color with the text "Color: " before it.
+// EXERCISE 5 – Print Each Number Squared
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// One-line arrow function
+exercise5Array.forEach(n => console.log(n * n));
 
-const exercise4Array = ["red", "green", "blue"];
-
-// Your solution here (one-line arrow function):
-// exercise4Array.forEach(
-
-// Your solution here (regular arrow function):
-// exercise4Array.forEach((
-
-// Expected output: "Color: red", "Color: green", "Color: blue" (each on a new line)
-
-/*
-EXERCISE 5
-----------
-Given the array [2, 4, 6, 8], use forEach() to print each number squared 
-(multiplied by itself).
-
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
-
-const exercise5Array = [2, 4, 6, 8];
-
-// Your solution here (one-line arrow function):
-// exercise5Array.forEach(
-
-// Your solution here (regular arrow function):
-// exercise5Array.forEach((
-
-// Expected output: 4, 16, 36, 64 (each on a new line)
-
+// Regular arrow function
+exercise5Array.forEach((n) => {
+  console.log(n * n);
+});
