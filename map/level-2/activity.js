@@ -1,140 +1,72 @@
 // ============================================
 // MAP FUNCTION - LEVEL 2
 // ============================================
-
 // ============================================
-// EXERCISES
+// EXERCISE SOLUTIONS
 // ============================================
 
-/*
-EXERCISE 1
-----------
-Given the array of objects:
-[
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
-  { name: "Charlie", age: 35 }
-]
+// EXERCISE 1 – Extract Names from Objects
 
-Use map() to create a new array containing only the names.
+// One-line arrow function
+const exercise1Result1 = exercise1Array.map(person => person.name);
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// Regular arrow function
+const exercise1Result2 = exercise1Array.map((person) => {
+  return person.name;
+});
 
-const exercise1Array = [
-  { name: "Alice", age: 25 },
-  { name: "Bob", age: 30 },
-  { name: "Charlie", age: 35 }
-];
+console.log("Exercise 1 - One-line:", exercise1Result1);
+console.log("Exercise 1 - Regular:", exercise1Result2);
 
-// Your solution here (one-line arrow function):
-// const exercise1Result1 = 
+// --------------------------------------------
 
-// Your solution here (regular arrow function):
-// const exercise1Result2 = 
+// EXERCISE 2 – Convert Numbers to Dollar Strings
 
-// Uncomment to test:
-// console.log("Exercise 1 - One-line:", exercise1Result1);
-// console.log("Exercise 1 - Regular:", exercise1Result2);
-// Expected: ["Alice", "Bob", "Charlie"]
+// One-line arrow function
+const exercise2Result1 = exercise2Array.map(n => `${n} dollars`);
 
-/*
-EXERCISE 2
-----------
-Given the array [5, 10, 15, 20], use map() to create a new array 
-where each number is converted to a string with " dollars" added.
+// Regular arrow function
+const exercise2Result2 = exercise2Array.map((n) => {
+  return `${n} dollars`;
+});
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+console.log("Exercise 2 - One-line:", exercise2Result1);
+console.log("Exercise 2 - Regular:", exercise2Result2);
 
-const exercise2Array = [5, 10, 15, 20];
+// --------------------------------------------
 
-// Your solution here (one-line arrow function):
-// const exercise2Result1 = 
+// EXERCISE 3 – Wrap Colors in HTML Tags
 
-// Your solution here (regular arrow function):
-// const exercise2Result2 = 
+// One-line arrow function
+const exercise3Result1 = exercise3Array.map(color => `<div>${color}</div>`);
 
-// Uncomment to test:
-// console.log("Exercise 2 - One-line:", exercise2Result1);
-// console.log("Exercise 2 - Regular:", exercise2Result2);
-// Expected: ["5 dollars", "10 dollars", "15 dollars", "20 dollars"]
+// Regular arrow function
+const exercise3Result2 = exercise3Array.map((color) => {
+  return `<div>${color}</div>`;
+});
 
-/*
-EXERCISE 3
-----------
-Given the array ["red", "green", "blue"], use map() to create a new array 
-where each color is wrapped in HTML tags like "<div>color</div>".
+console.log("Exercise 3 - One-line:", exercise3Result1);
+console.log("Exercise 3 - Regular:", exercise3Result2);
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// --------------------------------------------
 
-const exercise3Array = ["red", "green", "blue"];
+// EXERCISE 4 – Square Number and Add 10
 
-// Your solution here (one-line arrow function):
-// const exercise3Result1 = 
+// One-line arrow function
+const exercise4Result1 = exercise4Array.map(n => n * n + 10);
 
-// Your solution here (regular arrow function):
-// const exercise3Result2 = 
+// Regular arrow function
+const exercise4Result2 = exercise4Array.map((n) => {
+  return n * n + 10;
+});
 
-// Uncomment to test:
-// console.log("Exercise 3 - One-line:", exercise3Result1);
-// console.log("Exercise 3 - Regular:", exercise3Result2);
-// Expected: ["<div>red</div>", "<div>green</div>", "<div>blue</div>"]
+console.log("Exercise 4 - One-line:", exercise4Result1);
+console.log("Exercise 4 - Regular:", exercise4Result2);
 
-/*
-EXERCISE 4
-----------
-Given the array [1, 2, 3, 4, 5], use map() to create a new array 
-where each number is multiplied by itself and then added 10.
+// --------------------------------------------
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// EXERCISE 5 – Reverse Each Fruit Name
 
-const exercise4Array = [1, 2, 3, 4, 5];
-
-// Your solution here (one-line arrow function):
-// const exercise4Result1 = 
-
-// Your solution here (regular arrow function):
-// const exercise4Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 4 - One-line:", exercise4Result1);
-// console.log("Exercise 4 - Regular:", exercise4Result2);
-// Expected: [11, 14, 19, 26, 35]
-
-/*
-EXERCISE 5
-----------
-Given the array ["apple", "banana", "cherry"], use map() to create a new array 
-where each fruit name is reversed (e.g., "apple" becomes "elppa").
-
-Hint: You can use split(''), reverse(), and join('') methods.
-
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
-
-const exercise5Array = ["apple", "banana", "cherry"];
-
-// Your solution here (one-line arrow function):
-// const exercise5Result1 = 
-
-// Your solution here (regular arrow function):
-// const exercise5Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 5 - One-line:", exercise5Result1);
-// console.log("Exercise 5 - Regular:", exercise5Result2);
-// Expected: ["elppa", "ananab", "yrrehc"]
+// One-line arrow function
+const exercise5Result1 = exercise5Arra
 
