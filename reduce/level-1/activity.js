@@ -98,121 +98,88 @@ console.log("Example 3 - Regular:", sentence2.trim()); // "Hello World JavaScrip
 // ============================================
 
 /*
-EXERCISE 1
-----------
-Given the array [1, 2, 3, 4, 5], use reduce() to calculate the sum of 
-all numbers.
-
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
+EXERCISE 1 – Sum of all numbers
 */
 
-const exercise1Array = [1, 2, 3, 4, 5];
+// One-line arrow function
+const exercise1Result1 = exercise1Array.reduce((sum, curr) => sum + curr);
 
-// Your solution here (one-line arrow function):
-// const exercise1Result1 = 
+// Regular arrow function
+const exercise1Result2 = exercise1Array.reduce((sum, curr) => {
+  return sum + curr;
+});
 
-// Your solution here (regular arrow function):
-// const exercise1Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 1 - One-line:", exercise1Result1);
-// console.log("Exercise 1 - Regular:", exercise1Result2);
+console.log("Exercise 1 - One-line:", exercise1Result1);
+console.log("Exercise 1 - Regular:", exercise1Result2);
 // Expected: 15
 
 /*
-EXERCISE 2
-----------
-Given the array [10, 20, 30, 40], use reduce() to calculate the product 
-(multiplication) of all numbers.
-
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
+EXERCISE 2 – Product of all numbers
 */
 
-const exercise2Array = [10, 20, 30, 40];
+// One-line arrow function
+const exercise2Result1 = exercise2Array.reduce((product, curr) => product * curr);
 
-// Your solution here (one-line arrow function):
-// const exercise2Result1 = 
+// Regular arrow function
+const exercise2Result2 = exercise2Array.reduce((product, curr) => {
+  return product * curr;
+});
 
-// Your solution here (regular arrow function):
-// const exercise2Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 2 - One-line:", exercise2Result1);
-// console.log("Exercise 2 - Regular:", exercise2Result2);
+console.log("Exercise 2 - One-line:", exercise2Result1);
+console.log("Exercise 2 - Regular:", exercise2Result2);
 // Expected: 240000
 
-/*
-EXERCISE 3
-----------
-Given the array ["apple", "banana", "orange"], use reduce() to concatenate 
-all strings into one string separated by commas: "apple,banana,orange".
+// Expected: 240000
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// ============================================
+// EXERCISE 3 – Concatenate Strings with Commas
+// ============================================
 
-const exercise3Array = ["apple", "banana", "orange"];
+// One-line arrow function
+const exercise3Result1 = exercise3Array.reduce((acc, curr) => acc + ',' + curr);
 
-// Your solution here (one-line arrow function):
-// const exercise3Result1 = 
+// Regular arrow function
+const exercise3Result2 = exercise3Array.reduce((acc, curr) => {
+  return acc + ',' + curr;
+});
 
-// Your solution here (regular arrow function):
-// const exercise3Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 3 - One-line:", exercise3Result1);
-// console.log("Exercise 3 - Regular:", exercise3Result2);
+console.log("Exercise 3 - One-line:", exercise3Result1);
+console.log("Exercise 3 - Regular:", exercise3Result2);
 // Expected: "apple,banana,orange"
 
-/*
-EXERCISE 4
-----------
-Given the array [5, 15, 25, 35], use reduce() to find the maximum number.
+// ============================================
+// EXERCISE 4 – Find Maximum Number
+// ============================================
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// One-line arrow function
+const exercise4Result1 = exercise4Array.reduce((max, curr) => curr > max ? curr : max);
 
-const exercise4Array = [5, 15, 25, 35];
+// Regular arrow function
+const exercise4Result2 = exercise4Array.reduce((max, curr) => {
+  if (curr > max) {
+    return curr;
+  } else {
+    return max;
+  }
+});
 
-// Your solution here (one-line arrow function):
-// const exercise4Result1 = 
-
-// Your solution here (regular arrow function):
-// const exercise4Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 4 - One-line:", exercise4Result1);
-// console.log("Exercise 4 - Regular:", exercise4Result2);
+console.log("Exercise 4 - One-line:", exercise4Result1);
+console.log("Exercise 4 - Regular:", exercise4Result2);
 // Expected: 35
 
-/*
-EXERCISE 5
-----------
-Given the array [2, 4, 6, 8], use reduce() to calculate the sum of all 
-numbers, starting with an initial value of 10.
+// ============================================
+// EXERCISE 5 – Sum All Numbers with Initial Value 10
+// ============================================
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// One-line arrow function
+const exercise5Result1 = exercise5Array.reduce((sum, curr) => sum + curr, 10);
 
-const exercise5Array = [2, 4, 6, 8];
+// Regular arrow function
+const exercise5Result2 = exercise5Array.reduce((sum, curr) => {
+  return sum + curr;
+}, 10);
 
-// Your solution here (one-line arrow function):
-// const exercise5Result1 = 
-
-// Your solution here (regular arrow function):
-// const exercise5Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 5 - One-line:", exercise5Result1);
-// console.log("Exercise 5 - Regular:", exercise5Result2);
-// Expected: 30 (10 + 2 + 4 + 6 + 8)
+console.log("Exercise 5 - One-line:", exercise5Result1);
+console.log("Exercise 5 - Regular:", exercise5Result2);
+// Expected: 30
 
