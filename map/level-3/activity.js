@@ -3,149 +3,92 @@
 // ============================================
 
 // ============================================
-// EXERCISES
+// EXERCISE SOLUTIONS
 // ============================================
 
-/*
-EXERCISE 1
-----------
-Given the array of objects:
-[
-  { firstName: "John", lastName: "Doe" },
-  { firstName: "Jane", lastName: "Smith" },
-  { firstName: "Bob", lastName: "Johnson" }
-]
+// EXERCISE 1 – Create Full Names
 
-Use map() to create a new array with full names in the format "FirstName LastName".
+// One-line arrow function
+const exercise1Result1 = exercise1Array.map(
+  person => `${person.firstName} ${person.lastName}`
+);
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// Regular arrow function
+const exercise1Result2 = exercise1Array.map((person) => {
+  return `${person.firstName} ${person.lastName}`;
+});
 
-const exercise1Array = [
-  { firstName: "John", lastName: "Doe" },
-  { firstName: "Jane", lastName: "Smith" },
-  { firstName: "Bob", lastName: "Johnson" }
-];
+console.log("Exercise 1 - One-line:", exercise1Result1);
+console.log("Exercise 1 - Regular:", exercise1Result2);
 
-// Your solution here (one-line arrow function):
-// const exercise1Result1 = 
+// --------------------------------------------
 
-// Your solution here (regular arrow function):
-// const exercise1Result2 = 
+// EXERCISE 2 – Format Numbers as Strings
 
-// Uncomment to test:
-// console.log("Exercise 1 - One-line:", exercise1Result1);
-// console.log("Exercise 1 - Regular:", exercise1Result2);
-// Expected: ["John Doe", "Jane Smith", "Bob Johnson"]
+// One-line arrow function
+const exercise2Result1 = exercise2Array.map(n => `Number: ${n}`);
 
-/*
-EXERCISE 2
-----------
-Given the array [3, 7, 2, 9, 5], use map() to create a new array 
-where each number is converted to a string and formatted as "Number: X".
+// Regular arrow function
+const exercise2Result2 = exercise2Array.map((n) => {
+  return `Number: ${n}`;
+});
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+console.log("Exercise 2 - One-line:", exercise2Result1);
+console.log("Exercise 2 - Regular:", exercise2Result2);
 
-const exercise2Array = [3, 7, 2, 9, 5];
+// --------------------------------------------
 
-// Your solution here (one-line arrow function):
-// const exercise2Result1 = 
+// EXERCISE 3 – Convert Numbers to Percentages
 
-// Your solution here (regular arrow function):
-// const exercise2Result2 = 
+// One-line arrow function
+const exercise3Result1 = exercise3Array.map(n => `${n}%`);
 
-// Uncomment to test:
-// console.log("Exercise 2 - One-line:", exercise2Result1);
-// console.log("Exercise 2 - Regular:", exercise2Result2);
-// Expected: ["Number: 3", "Number: 7", "Number: 2", "Number: 9", "Number: 5"]
+// Regular arrow function
+const exercise3Result2 = exercise3Array.map((n) => {
+  return `${n}%`;
+});
 
-/*
-EXERCISE 3
-----------
-Given the array of numbers [10, 25, 30, 45], use map() to create a new array 
-where each number is converted to a percentage string (e.g., 10 becomes "10%").
+console.log("Exercise 3 - One-line:", exercise3Result1);
+console.log("Exercise 3 - Regular:", exercise3Result2);
 
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
+// --------------------------------------------
 
-const exercise3Array = [10, 25, 30, 45];
+// EXERCISE 4 – Capitalize First Letter of Each Word
 
-// Your solution here (one-line arrow function):
-// const exercise3Result1 = 
+// One-line arrow function
+const exercise4Result1 = exercise4Array.map(sentence =>
+  sentence
+    .split(" ")
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(" ")
+);
 
-// Your solution here (regular arrow function):
-// const exercise3Result2 = 
+// Regular arrow function
+const exercise4Result2 = exercise4Array.map((sentence) => {
+  return sentence
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+});
 
-// Uncomment to test:
-// console.log("Exercise 3 - One-line:", exercise3Result1);
-// console.log("Exercise 3 - Regular:", exercise3Result2);
-// Expected: ["10%", "25%", "30%", "45%"]
+console.log("Exercise 4 - One-line:", exercise4Result1);
+console.log("Exercise 4 - Regular:", exercise4Result2);
 
-/*
-EXERCISE 4
-----------
-Given the array ["hello world", "javascript is fun", "coding rocks"], 
-use map() to create a new array where each string's first letter of each 
-word is capitalized (e.g., "hello world" becomes "Hello World").
+// --------------------------------------------
 
-Hint: You might need to split, map each word, capitalize, and join.
+// EXERCISE 5 – Calculate Total Cost
 
-Write your solution using:
-- One-line arrow function (if possible, or regular)
-- Regular arrow function
-*/
+// One-line arrow function
+const exercise5Result1 = exercise5Array.map(
+  item => item.price * item.quantity
+);
 
-const exercise4Array = ["hello world", "javascript is fun", "coding rocks"];
+// Regular arrow function
+const exercise5Result2 = exercise5Array.map((item) => {
+  return item.price * item.quantity;
+});
 
-// Your solution here (one-line arrow function):
-// const exercise4Result1 = 
+console.log("Exercise 5 - One-line:", exercise5Result1);
+console.log("Exercise 5 - Regular:", exercise5Result2);
 
-// Your solution here (regular arrow function):
-// const exercise4Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 4 - One-line:", exercise4Result1);
-// console.log("Exercise 4 - Regular:", exercise4Result2);
-// Expected: ["Hello World", "Javascript Is Fun", "Coding Rocks"]
-
-/*
-EXERCISE 5
-----------
-Given the array of objects:
-[
-  { price: 10, quantity: 2 },
-  { price: 5, quantity: 4 },
-  { price: 8, quantity: 3 }
-]
-
-Use map() to create a new array with the total cost (price * quantity) for each item.
-
-Write your solution using:
-- One-line arrow function
-- Regular arrow function
-*/
-
-const exercise5Array = [
-  { price: 10, quantity: 2 },
-  { price: 5, quantity: 4 },
-  { price: 8, quantity: 3 }
-];
-
-// Your solution here (one-line arrow function):
-// const exercise5Result1 = 
-
-// Your solution here (regular arrow function):
-// const exercise5Result2 = 
-
-// Uncomment to test:
-// console.log("Exercise 5 - One-line:", exercise5Result1);
-// console.log("Exercise 5 - Regular:", exercise5Result2);
-// Expected: [20, 20, 24]
 
